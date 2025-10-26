@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IntroSpark</title>
+  <meta name="theme-color" content="#111827">
+  <link rel="manifest" href="/manifest.json">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#22C55E',
+              hover: '#16A34A',
+            },
+            gray: {
+              900: '#111827',
+              800: '#1F2937',
+              700: '#374151',
+              600: '#4B5563',
+              500: '#6B7280',
+              400: '#9CA3AF',
+              200: '#E5E7EB',
+              100: '#F3F4F6',
+            }
+          },
+          borderRadius: {
+            'DEFAULT': '16px',
+            'lg': '16px',
+            'xl': '16px',
+            '2xl': '16px',
+            '3xl': '24px',
+          },
+          boxShadow: {
+            'DEFAULT': '0 2px 8px rgba(0,0,0,.06)',
+            'md': '0 8px 24px rgba(0,0,0,.12)',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          keyframes: {
+            'slide-down-fade': {
+                '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            'slide-up-fade': {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            'fade-in': {
+              'from': { opacity: 0 },
+              'to': { opacity: 1 }
+            },
+            'pulse': {
+              '50%': { opacity: .5 },
+            },
+          },
+          animation: {
+              'slide-down-fade': 'slide-down-fade 0.3s ease-out',
+              'slide-up-fade': 'slide-up-fade 0.3s ease-out',
+              'fade-in': 'fade-in 0.2s ease-out',
+              'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-900 text-gray-200 antialiased">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

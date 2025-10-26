@@ -1,0 +1,7 @@
+{
+  "name": "IntroSpark",
+  "description": "Ai powered networking",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
